@@ -19,7 +19,7 @@ __all__ = [
 ISIS_ROOT = os.environ.setdefault('ISISROOT', '/usgs/pkgs/isis3/isis')
 try:
     with open(path.join(ISIS_ROOT, 'version')) as _f:
-        ISIS_VERSION = _f.readline().strip()
+        ISIS_VERSION = _f.readline().split('#')[0].strip()
 
     ISIS_VERISON_TUPLE = tuple(map(int, ISIS_VERSION.split('.')))
 
