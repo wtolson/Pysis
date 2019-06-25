@@ -15,7 +15,7 @@ __all__ = [
     'require_isis_version'
 ]
 
-ISIS_ROOT = os.environ.setdefault('ISISROOT', '/usgs/pkgs/isis3/isis')
+ISIS_ROOT = os.environ.setdefault('ISISROOT', '/usgs/pkgs/isis3/install')
 try:
     with open(path.join(ISIS_ROOT, 'version')) as _f:
         ISIS_VERSION = _f.readline().split('#')[0].strip()
