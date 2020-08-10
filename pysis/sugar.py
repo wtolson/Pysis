@@ -39,7 +39,6 @@ def point_info(cube_path, x, y, point_type, allow_outside=False):
     if point_type not in {"image", "ground"}:
         raise Exception(f'{point_type} is not a valid point type, valid types are ["image", "ground"]')
 
-
     if isinstance(x, Number) and isinstance(y, Number):
         x, y = [x], [y]
 
